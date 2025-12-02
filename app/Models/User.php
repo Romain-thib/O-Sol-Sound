@@ -24,6 +24,13 @@ class User extends Authenticatable
         return $this->belongsToMany(Article::class, 'likes');
     }
 
+    public function suivis() {
+        return $this->belongsToMany(User::class, 'suivis', 'suiveur_id', 'suivi_id');
+    }
+
+    public function suiveurs() {
+        return $this->belongsToMany(User::class, 'suivis', 'suivi_id', 'suiveur_id');
+    }
 
     /**
      * The attributes that are mass assignable.
