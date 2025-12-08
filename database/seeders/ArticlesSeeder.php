@@ -12,6 +12,8 @@ class ArticlesSeeder extends Seeder {
      * Run the database seeds.
      */
     public function run(): void {
+        $faker = Factory::create('fr_FR');
+
         $titre = "Au clair de la lune";
 
         $texte = "Ah, Au clair de la lune, cette ballade intemporelle où l’on découvre que la première urgence, au XVIIIᵉ siècle, n’était ni la faim, ni la guerre, ni même la météo… mais un manque de bougie. Le héros, manifestement équipé d’une mémoire de poisson rouge, se retrouve plongé dans l’obscurité totale et décide d’aller sonner chez son voisin Pierrot, spécialiste incontesté de la gestion d’inventaire… enfin, c’est ce qu’il espère. Pierrot, bien sûr, dort. Car personne ne dort jamais dans une chanson, sauf quand on a besoin d’une bougie.<br />
@@ -37,7 +39,6 @@ Bref : une aventure nocturne minimaliste, un suspense à hauteur d’enfant, et 
             "en_ligne" => $faker->numberBetween(0, 1),
         ]);
 
-        $faker = Factory::create('fr_FR');
         for($i = 1; $i <= 50; $i++)
             Article::create([
                 'titre' => $faker->text(20),
