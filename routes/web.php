@@ -35,6 +35,14 @@ Route::post('/articles', [ArticleController::class, 'store'])
     ->middleware('auth')
     ->name('articles.store');
 
+Route::get('/articles/{article}/edit', [ArticleController::class, 'edit'])
+    ->middleware('auth')
+    ->name('articles.edit');
+
+Route::put('/articles/{article}', [ArticleController::class, 'update'])
+    ->middleware('auth')
+    ->name('articles.update');
+
 Route::get('/contact', function () {
     return view('statiques.contact');
 })->name('contact');
