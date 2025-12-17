@@ -5,9 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ArticleController::class, 'home'])->name('home');
 
-Route::get('/liste-article', function () {
-    return view('/articles/liste-article');
-})->name("liste-article");
+Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 
 Route::get('/contact', function () {
     return view('contact');
