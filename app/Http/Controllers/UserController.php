@@ -17,4 +17,9 @@ class UserController extends Controller
             'utilisateur' => $user
         ]);
     }
+    public function edit()
+    {
+        $utilisateur = Auth::user();
+        return view('profil.edit', compact('utilisateur'));
+    }
 }
