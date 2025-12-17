@@ -173,6 +173,7 @@ footer {
 .btn:hover {
     background-color: #ffbf00;
     color: #006D2C;
+    transition: all 0.3s ease;
 }
 
 
@@ -199,6 +200,7 @@ footer {
 
 .carte-auteur a:hover{
     color: white;
+    transition: all 0.3s ease;
 }
 
 .carte-resume {
@@ -207,6 +209,12 @@ footer {
 
 .card img {
     border-radius: 1rem;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
 }
 
 /* Fin style carte */ 
