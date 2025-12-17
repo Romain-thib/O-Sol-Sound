@@ -14,6 +14,6 @@
     @yield("contenu")
 </main>
 
-<footer>IUT de Lens</footer>
+<x-footer/>
 </body>
 </html>
