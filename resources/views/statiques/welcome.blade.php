@@ -1,6 +1,5 @@
-@extends("components.layout.app")
-
-@section('contenu')
-    C'est le point de départ.
-
-@endsection
+<x-layout.app>
+    <h1>
+        Bienvenue sur notre site ;)
+    </h1>
+</x-layout.app>
