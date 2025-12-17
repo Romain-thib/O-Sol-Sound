@@ -42,3 +42,5 @@ Route::get('/home', fn() => redirect()->route('profil.show'));
 Route::get('/profil/modifier', [UserController::class, 'edit'])->name('profil.edit');
 Route::get('/articles/{id}', [ArticleController::class, 'show'])->name('articles.show');
 Route::get('/rythmes/{id}', [ArticleController::class, 'byRythme'])->name('articles.byRythme');
+
+Route::get('/profil/{id}', [UserController::class, 'voirProfilPublic'])->name('profil.user');
