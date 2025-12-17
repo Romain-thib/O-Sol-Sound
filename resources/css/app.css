@@ -217,4 +217,11 @@ footer {
     transition: all 0.3s ease;
 }
 
+.card h2 {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
 /* Fin style carte */ 
