@@ -1,10 +1,35 @@
 <x-layout.app :title="$article->titre">
     @if(Auth::check() && Auth::id() === $article->user_id)
-        <form action="{{ route('articles.destroy', $article) }}" method="POST">
-            @csrf
-            @method('DELETE')
-            <button type="submit">Supprimer l’article</button>
-        </form>
+        <div x-data="{ open: false }">
+            <!-- Bouton qui ouvre la confirmation -->
+            <button @click="open = true" class="bg-red-600 text-white px-3 py-1 rounded">
+                Supprimer l’article
+            </button>
+
+            <!-- Fenêtre de confirmation -->
+            <div x-show="open"
+                 class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+                 x-transition>
+                <div class="bg-white p-6 rounded shadow-lg">
+                    <h2 class="text-lg font-bold mb-4">Confirmation</h2>
+                    <p class="mb-4">Êtes-vous sûr de vouloir supprimer cet article ?</p>
+
+                    <div class="flex justify-end space-x-2">
+                        <button @click="open = false" class="px-3 py-1 bg-gray-300 rounded">
+                            Annuler
+                        </button>
+
+                        <form action="{{ route('articles.destroy', $article) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="px-3 py-1 bg-red-600 text-white rounded">
+                                Supprimer
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     @endif
     <h1>{{ $article->titre }}</h1>
     <p><strong>Auteur :</strong> {{ $article->editeur->name }}</p>
