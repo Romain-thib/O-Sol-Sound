@@ -284,6 +284,12 @@ a.lien-a-footer {
 
 }
 
+.nav-responsive {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* fin Style Navbar et Footer */
 
 /* Style Contact */ 

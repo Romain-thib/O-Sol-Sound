@@ -9,19 +9,6 @@
         <a href="{{route('articles.index')}}"class="lien-a">Article</a>
         <a href="{{ route('presentation') }}"class="lien-a">Présentation</a>
         <a href="{{ route('contact') }}"class="lien-a">Contact</a>
-
-        @auth
-            <a href="{{route("profil.show")}}" class="lien-a">
-                {{Auth::user()->name}}
-            </a>
-            <a href="{{route("logout")}}" class="lien-a"
-            onclick="document.getElementById('logout').submit(); return false;">Logout</a>
-            <form id="logout" action="{{route("logout")}}" method="post">
-                @csrf
-            </form>
-        @else
-            <a href="{{route("login")}}" class="btn-connexion">Connexion</a>
-        @endauth
     </div>
     <div>
         @auth
