@@ -345,7 +345,7 @@ a.lien-a-footer {
     left : 350px;
     opacity: 40%;
 }
-.form-form{
+.form-contact{
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -579,3 +579,5 @@ a.lien-a-footer {
         font-size: 1.5rem;
     }
 } 
+
+/* Style Login / Regsiter */
