@@ -23,4 +23,4 @@ Route::get('/home', function () {
 
 Route::get('/profil', [UserController::class, 'show'])->name('profil.show');
 Route::get('/home', fn() => redirect()->route('profil.show'));
-
+Route::get('/profil/modifier', [UserController::class, 'edit'])->name('profil.edit');
