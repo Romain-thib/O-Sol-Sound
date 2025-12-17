@@ -1,4 +1,11 @@
 <x-layout.app :title="$article->titre">
+    @if(Auth::check() && Auth::id() === $article->user_id)
+        <form action="{{ route('articles.destroy', $article) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit">Supprimer l’article</button>
+        </form>
+    @endif
     <h1>{{ $article->titre }}</h1>
     <p><strong>Auteur :</strong> {{ $article->editeur->name }}</p>
     <p><strong>Résumé :</strong> {{ $article->resume }}</p>
