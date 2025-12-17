@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +18,9 @@ Route::get('/test-vite', function () {
 })->name("test-vite");
 
 Route::get('/home', function () {
-    return view('home');
+    return view('profil.show');
 })->name("home");
 
+Route::get('/profil', [UserController::class, 'show'])->name('profil.show');
+Route::get('/home', fn() => redirect()->route('profil.show'));
 
