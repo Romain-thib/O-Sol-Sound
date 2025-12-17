@@ -8,7 +8,6 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
 }
 
 
@@ -165,6 +164,10 @@ p {
     align-items: center;
 }
 
+.bx {
+    font-size: 1.5rem;
+}
+
 .navbar a.lien-a#active-page {
     color: #ffdf00;
     font-weight: bold;
@@ -281,6 +284,12 @@ a.lien-a-footer {
 
 }
 
+.nav-responsive {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* fin Style Navbar et Footer */
 
 /* Style Contact */ 
@@ -329,3 +338,140 @@ a.lien-a-footer {
 }
 
 /* Fin style carte */ 
+
+/* Début burger */ 
+.burger-menu {
+    display: none; /* Caché sur Desktop */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+#bar-container {
+    height: 50px;
+}
+/* Fin Burger */
+
+
+/* Style responsive */
+@media (max-width: 1188px) {
+    #text-header {
+    text-align: center;
+    }
+
+    .header h1 {
+    font-size: 6rem;
+    }
+
+    .header {
+    z-index: 0;
+    }
+
+    #fond-img {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+    font-size: 12px; /* Maintenant, 1rem = 14px partout sur le site */
+    }
+
+    #text-header {
+    text-align: center;
+    }
+
+    .header {
+    z-index: 0;
+    }
+
+    .header h1 {
+        margin-top: 1rem;
+    }
+
+    #fond-img {
+        z-index: -1;
+        width: 220px;
+    }
+
+    .nav-responsive {
+        display: none;
+    }
+
+    .logo-navbar img {
+        height: 50px;
+        margin: 5px 0;
+    }
+
+    .burger-menu {
+        display: flex;
+        position: relative;
+    }
+
+    #nav-bar {
+        position: absolute;
+        top: 3rem;
+        z-index: 1;
+        left: 0rem;
+        transform: translate(-70%, 0);
+        align-items: flex-end;
+        background-color: #009c3b;
+    }
+
+    #nav-bar a {
+        text-align: end;
+        width: fit-content;
+        padding: 1.5rem 2rem;
+        font-size: 1.5rem;
+    }
+
+    .active {
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+
+    }
+
+    .Unactive {
+        display: none;
+        opacity: 0;
+    }
+
+    .articles  {
+        flex-direction: column;
+    }
+
+    .articles .card p {
+        font-size: 1.5rem;
+    }
+
+
+    .btn {
+        font-size: 1.6rem;
+    }
+
+    .footer-copyright>p {
+        font-size: 0.8rem;
+    }
+
+    .logo-navbar2 .logo-text2 {
+        font-size: 1.8rem;
+    }
+
+    .footer-links {
+        margin: 0.5rem 0 1rem 0;
+    }
+
+    .navbar a.lien-a {
+        font-size: 1.5rem;
+    }
+} 
