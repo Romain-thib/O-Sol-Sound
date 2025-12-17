@@ -43,6 +43,10 @@ Route::put('/articles/{article}', [ArticleController::class, 'update'])
     ->middleware('auth')
     ->name('articles.update');
 
+Route::delete('/articles/{article}', [ArticleController::class, 'destroy'])
+    ->middleware('auth')
+    ->name('articles.destroy');
+
 Route::get('/contact', function () {
     return view('statiques.contact');
 })->name('contact');
