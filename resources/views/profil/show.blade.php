@@ -15,7 +15,7 @@
                      alt="Avatar de {{ $utilisateur->name }}">
             </div>
             <p>DEBUG : Le chemin est : {{ $utilisateur->avatar }}</p>
-            <img src="{{ $utilisateur->avatar }}" ...>
+
             <div>
                 <h1>Nom : {{ $utilisateur->name }}</h1>
                 <p>Email : {{ $utilisateur->email }}</p>
@@ -27,6 +27,34 @@
         <div>
             <p>Abonnés : {{ $utilisateur->suiveurs()->count() }}</p>
             <p>Abonnements : {{ $utilisateur->suivis()->count() }}</p>
+        </div>
+
+        {{-- ses articles en cours de rédaction --}}
+        <div>
+            <h2>Articles en cours de rédaction</h2>
+            <ul>
+                @forelse($utilisateur->mesArticles()->where('is_published', false)->get() as $article)
+                    <li>
+                        <a href="{{ route('articles.edit', $article->id) }}">{{ $article->title }}</a>
+                    </li>
+                @empty
+                    <li>Aucun article en cours de rédaction.</li>
+                @endforelse
+            </ul>
+        </div>
+
+        {{-- les articles qu’il a aimés --}}
+        <div>
+            <h2>Articles aimés</h2>
+            <ul>
+                @forelse($utilisateur->likes as $article)
+                    <li>
+                        <a href="{{ route('articles.show', $article->id) }}">{{ $article->title }}</a>
+                    </li>
+                @empty
+                    <li>Aucun article aimé.</li>
+                @endforelse
+            </ul>
         </div>
 
     </section>
