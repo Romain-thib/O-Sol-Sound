@@ -12,7 +12,7 @@
 <div class="contact-wrapper">
     <div class="contact-gauche">
             <img src="{{ Vite::asset('resources/images/icon_soleil.webp') }}" alt="Soleil" class="contact-soleil">
-        <h1 class="contact-title">Besoin d'informations</h1>
+        <h1 class="contact-title">Besoin d'informations ?</h1>
         <p class="contact-soustitle">Contactez-nous ! Notre équipe vous répond rapidement </p>
     </div>
 

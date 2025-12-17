@@ -297,6 +297,7 @@ a.lien-a-footer {
     align-items: baseline;
     padding: 2rem;
     gap: 2rem;
+    margin-top:5rem;
 }
 .contact-gauche{
     flex: 1;
@@ -322,6 +323,8 @@ a.lien-a-footer {
     font-size: 1.2rem;
     margin: 0;
     z-index: 1;
+    margin-top:1rem;
+
 }
 .contact-soleil{
     width: 250px;
@@ -329,8 +332,8 @@ a.lien-a-footer {
     margin-top: 1rem;
     position: absolute;
     z-index: 0;
-    top : 120px;
-    left : 400px;
+    top : 100px;
+    left : 350px;
     opacity: 40%;
 }
 form{
@@ -378,6 +381,13 @@ form{
     font-weight: 600;
     font-style: normal;
 }
+
+.btn-submit:hover{
+    background-color: #e6ac00;
+    transition: all 0.3s ease;
+    color:brown;
+}
+
 
 /* Fin Style Contact *//* style Carte */ 
 
