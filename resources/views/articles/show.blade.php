@@ -34,7 +34,7 @@
         @endif
         
         <div class="image-container">
-            <img src="{{ $article->image }}" alt="{{ $article->titre }}" style="max-width:300px;">
+            <img src="{{   asset($article->image) }}" alt="{{ $article->titre }}" style="max-width:300px;">
             <div>
                 <p class="carte-auteur"><strong>{{ $article->editeur->name }}</strong> </p>
                 <p class="carte-auteur"><strong>{{ $article->nb_vues }} vues</strong> </p>
