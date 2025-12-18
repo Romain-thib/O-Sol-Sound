@@ -9,7 +9,7 @@
                 @csrf
                 @method('PUT')
 
-                <div class="edit-profil-group">
+                <div class="edit-git profil-group">
                     <label>Nom :</label>
                     <input type="text" name="name" value="{{ old('name', $utilisateur->name) }}" class="edit-profil-input">
                 </div>
