@@ -5,6 +5,10 @@
         margin-top: 0;
         border-top : 1px solid #777777a8;
     }
+
+    p{
+        margin-bottom:30px;
+    }
 </style>
 
     <section class="profilcss-section">
@@ -52,7 +56,7 @@
 
             <!-- ARTICLES EN COURS (Brouillons) -->
             <div class="profilcss-content-section">
-                <h2 class="titre">Articles en cours de rédaction</h2>
+                <h2 class="profilcss-section-title">Articles en cours de rédaction</h2>
                 
                 <div class="profilcss-grid">
                     @forelse($utilisateur->mesArticles()->where('en_ligne', 0)->get() as $article)
