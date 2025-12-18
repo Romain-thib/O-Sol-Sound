@@ -9,8 +9,8 @@
 
                 <!-- Fenêtre de confirmation -->
                 <div x-show="open"
-                    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
-                    x-transition>
+                     class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+                     x-transition>
                     <div class="bg-white p-6 rounded shadow-lg">
                         <h2 class="text-lg font-bold mb-4">Confirmation</h2>
                         <p class="mb-4">Êtes-vous sûr de vouloir supprimer cet article ?</p>
@@ -32,43 +32,63 @@
                 </div>
             </div>
         @endif
-        
+
         <div class="image-container">
-            <img src="{{   asset($article->image) }}" alt="{{ $article->titre }}" style="max-width:300px;">
+            <img src="{{ asset(path: $article->image) }}" alt="{{ $article->titre }}" style="max-width:300px;">
             <div>
-                <p class="carte-auteur"><strong>{{ $article->editeur->name }}</strong> </p>
-                <p class="carte-auteur"><strong>{{ $article->nb_vues }} vues</strong> </p>
+                <p class="carte-auteur"><strong>{{ $article->editeur->name }}</strong></p>
+                <p class="carte-auteur"><strong>{{ $article->nb_vues }} vues</strong></p>
             </div>
         </div>
 
         <div id="article-infos">
             <h1 class="titre">{{ $article->titre }}</h1>
             <p><strong class="S-titre">Résumé :</strong> {{ $article->resume }}</p>
+            <p><strong class="S-titre">Texte :</strong> {{ $article->texte }}</p>
             <p><strong class="S-titre">Rythme :</strong> {{ $article->rythme->texte }}</p>
             <p><strong class="S-titre">Accessibilité :</strong> {{ $article->accessibilite->texte }}</p>
             <p><strong class="S-titre">Conclusion :</strong> {{ $article->conclusion->texte }}</p>
-            <audio controls src="{{ $article->media }}"></audio>
-            
+            @if($article->media)
+                <div class="audio-player">
+                    <p><strong class="S-titre">Audio :</strong></p>
+
+                    @if(Str::endsWith($article->media, '.mp3') || Str::contains($article->media, '.mp3'))
+                        {{-- Fichier MP3 direct ou lien HTTP avec MP3 --}}
+                        <audio controls>
+                            <source src="{{ $article->media }}" type="audio/mpeg">
+                            Votre navigateur ne supporte pas la lecture audio.
+                        </audio>
+                    @else
+                        <p>
+                            <a href="{{ $article->media }}" target="_blank">
+                                Ouvrir le média
+                            </a>
+                        </p>
+                    @endif
+                </div>
+            @else
+                <p>Aucun média audio disponible pour cet article.</p>
+            @endif
+
             @if(auth()->check())
-                <x-like :article="$article" />
+                <x-like :article="$article"/>
             @else
                 <p><a href="{{ route('login') }}">Connectez-vous</a> pour liker cet article.</p>
             @endif
         </div>
-
-        <div id="commentaires">   
+        <div id="commentaires">
             <h3 class="titre">Commentaires</h3>
             <div id="avis-container">
                 @forelse($article->avis as $avis)
-                    <x-commentaire :avis="$avis" />
+                    <x-commentaire :avis="$avis"/>
                 @empty
                     <p>Aucun commentaire pour le moment.</p>
                 @endforelse
             </div>
-            
 
-                <x-commentaire-form :article="$article" />
+
+            <x-commentaire-form :article="$article"/>
         </div>
-
+        <p><strong>Nombre de vues :</strong> {{ $article->nb_vues }}</p>
     </section>
 </x-layout.app>
