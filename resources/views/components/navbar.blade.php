@@ -1,8 +1,9 @@
-<nav class="navbar">
-    <div class="logo-navbar">
-        <img src="{{ Vite::asset('resources/images/logo.webp') }}" alt="Logo OsolSound">
-        <p class="logo-text">O Sol Sound</p>
-    </div> 
+
+    <nav class="navbar">
+        <div class="logo-navbar">
+            <img src="{{ Vite::asset('resources/images/logo.webp') }}" alt="Logo OsolSound">
+            <p class="logo-text">O Sol Sound</p>
+        </div> 
 
     <div class="nav-responsive">
         <a href="{{route('home')}}" class="lien-a" id="active-page">Accueil</a>
@@ -10,7 +11,7 @@
         <a href="{{ route('presentation') }}"class="lien-a">Présentation</a>
         <a href="{{ route('contact') }}"class="lien-a">Contact</a>
     </div>
-    <div>
+    <div class="nav-authentication">
         @auth
         <a href="{{route("profil.show")}}" class="lien-a"> 
             {{Auth::user()->name}}
@@ -39,4 +40,5 @@
             
     </button>
 
+</nav>
 </nav>
