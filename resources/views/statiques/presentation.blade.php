@@ -15,12 +15,12 @@ C’est une musique qui se caractérise par une certaine douceur, une voix feutr
 <div class="flip-card">
     <div class="flip-card-inner">
         <div class="flip-card-front">
-        <h2>Recto</h2>
-        <p>photo vinyle ici</p>
+        <img src="{{ Vite::asset('resources/images/vinyle.png') }}" alt="Logo guitare">
         </div>
         <div class="flip-card-back">
         <h2>Verso</h2>
         <p>Albums</p>
+        
         </div>
     </div>
     </div>

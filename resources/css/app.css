@@ -640,10 +640,13 @@ a.lien-a-footer {
 /* Le conteneur définit la perspective pour l'effet 3D */
     .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 200px;
+    width: 500px;
+    height: fit-content;
     perspective: 1000px; 
     margin-top: 5rem;
+    aspect-ratio: 1 / 1;  /* Force le format carré */
+    object-fit: cover;    /* Remplit le carré sans déformer l'image (recadrage auto) */
+    object-position: center;
     }
 
     /* Le wrapper qui contient les deux faces */
@@ -680,6 +683,13 @@ a.lien-a-footer {
     .flip-card-front {
     background-color: #3498db;
     color: white;
+    }
+
+    .flip-card-front img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center;
     }
 
     /* Style spécifique Back (déjà retourné par défaut) */
