@@ -9,11 +9,11 @@
             </div>
             <div class="flip-card-back">
                 <h1 class="titre">Origines</h1>
-            <audio controls="" src="https://comptines.tv/musiques/au_clair_de_la_lune.mp3"></audio>
-            <audio controls="" src="https://comptines.tv/musiques/au_clair_de_la_lune.mp3"></audio>
-            <audio controls="" src="https://comptines.tv/musiques/au_clair_de_la_lune.mp3"></audio>
-            <audio controls="" src="https://comptines.tv/musiques/au_clair_de_la_lune.mp3"></audio>
-            
+                <audio controls="" src="https://comptines.tv/musiques/au_clair_de_la_lune.mp3"></audio>
+                <audio controls="" src="https://comptines.tv/musiques/au_clair_de_la_lune.mp3"></audio>
+                <audio controls="" src="https://comptines.tv/musiques/au_clair_de_la_lune.mp3"></audio>
+                <audio controls="" src="https://comptines.tv/musiques/au_clair_de_la_lune.mp3"></audio>
+                <img src="{{ Vite::asset('resources/images/vinyle.png') }}" alt="Logo guitare" class="vinyle-entree">
             </div>
         </div>
     </div>
