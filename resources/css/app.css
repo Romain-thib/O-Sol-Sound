@@ -469,7 +469,7 @@ a.lien-a-footer {
 .card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 2rem;
-    padding: 1rem 1rem;
+    padding: 1.5rem 1rem;
     border: 1px solid #333;
     transform: translateY(-5px);    
     transition: all 0.3s ease;
@@ -485,7 +485,7 @@ a.lien-a-footer {
 .card{
     border: 1px solid #333;
     border-radius: 2rem;
-    padding: 1rem 1rem;
+    padding: 1.5rem 1rem;
 }
 
 /* Fin style carte */ 
