@@ -31,7 +31,7 @@
                     <label for="remember" class="remember-label">Se souvenir de moi</label>
                 </div>
 
-                <button type="submit">Se connecter</button>
+                <button type="submit" class="btn-login">Se connecter</button>
             </form>
             <div class="register-link-form">
                 <p>Pas encore de compte ? <a href="{{ route('register') }}">Inscrivez-vous ici</a></p>

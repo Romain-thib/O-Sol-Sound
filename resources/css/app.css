@@ -409,6 +409,7 @@ a.lien-a-footer {
     justify-content: space-between;
     width: 100%;
     padding: 1rem 0;
+    
 }
 
 .carte-auteur a{
@@ -417,6 +418,7 @@ a.lien-a-footer {
     background-color: #ffbf00;
     border-radius: 2rem;
     padding: 0.2rem 1rem;
+    text-align: center;
 }
 
 .carte-auteur a:hover{
@@ -426,15 +428,22 @@ a.lien-a-footer {
 
 .carte-resume {
     padding: 1rem 0;
+    text-align: center;
 }
 
 .card img {
+    margin : 1rem auto;
     border-radius: 1rem;
+    display: flex;
+
 }
 
 .card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
+    border-radius: 2rem;
+    padding: 1rem 1rem;
+    border: 1px solid #333;
+    transform: translateY(-5px);    
     transition: all 0.3s ease;
 }
 
@@ -443,6 +452,12 @@ a.lien-a-footer {
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
+}
+
+.card{
+    border: 1px solid #333;
+    border-radius: 2rem;
+    padding: 1rem 1rem;
 }
 
 /* Fin style carte */ 
@@ -699,9 +714,10 @@ a.lien-a-footer {
         }
 
         /* --- BOUTON --- */
-        .login-form.button[type="submit"] {
+        .btn-login[type="submit"] {
             margin-top: 10px;
             padding: 15px 30px;
+            border-radius: 1rem;
             background-color: white;
             color: #006D2C;
             font-family: "Inter", sans-serif;
@@ -763,6 +779,7 @@ a.lien-a-footer {
             align-items: center;
             min-height: 80vh;
             max-width: 100%;
+            background-color:#006D2C;
         }
 .register-video-bg{
     position:absolute;
@@ -862,7 +879,7 @@ video{
             margin-top: 15px;
             padding: 15px 30px;
             background-color: white;
-            border-radius: 4rem;
+            border-radius: 2rem;
             color: #006D2C;
             font-family: "Inter", sans-serif;
             font-weight: bold;
@@ -899,3 +916,143 @@ video{
             text-decoration: underline;
             opacity: 0.9;
         }
+
+
+/* --- CONTENEUR PRINCIPAL --- */
+.ttarticles-wrapper {
+    width: 100%;
+    background-color: #006D2C; /* Vert identité */
+    color: white;
+    min-height: 80vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* --- FORMULAIRE --- */
+.ttarticles-form {
+    padding: 25px;
+    border-radius: 8px;
+    border-bottom: 5px solid #004d1f;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+    margin-bottom: 50px;
+    backdrop-filter: blur(10px);
+}
+
+/* Groupe (Label + Input) */
+.ttarticles-group {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.titre-ttarticles{
+    text-align: center;
+}
+
+/* Label spécifique */
+.ttarticles-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #ffffff; /* Visible sur fond blanc */
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin-bottom: 0; /* Override frameworks */
+}
+
+/* Champs (Input & Select) unifiés */
+.ttarticles-input, 
+.ttarticles-select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: all 0.2s;
+    /* Reset styles navigateurs */
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none; 
+}
+
+/* Astuce pour remettre la flèche du select si appearance:none l'enlève */
+.ttarticles-select {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right .7em top 50%;
+    background-size: .65em auto;
+}
+
+.ttarticles-input:focus, 
+.ttarticles-select:focus {
+    outline: none;
+    border-color: #006D2C;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 109, 44, 0.1);
+}
+
+/* Bouton */
+
+.ttarticles-btn{
+    margin-top: 10px;
+    padding: 15px 30px;
+    border-radius: 1rem;
+    border: 1px solid #004d1f;
+    background-color: white;
+    color: #006D2C;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.ttarticles-btn:hover {
+    background-color: #009c3b;
+    color:#004d1f;
+}
+
+/* --- GRILLE --- */
+.ttarticles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+/* --- EMPTY STATE (PAS DE RESULTATS) --- */
+.ttarticles-empty-box {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    border: 1px dashed rgba(255,255,255,0.3);
+}
+
+.ttarticles-empty-text {
+    color: #fff;
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .ttarticles-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .ttarticles-form {
+        padding: 15px;
+    }
+}

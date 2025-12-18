@@ -6,12 +6,12 @@
     }
 </style>
  <div class="register-section">
-    <div class="register-video-bg">
-        <video autoplay muted playsinline loop preload="auto">
+    <!-- <div class="register-video-bg"> -->
+        <!-- <video autoplay muted playsinline loop preload="auto">
         <source src="test.mp4" type="video/mp4">
 
-        </video>
-    </div>
+        </video> -->
+    <!-- </div> -->
         <div class="register-content">
             
             <div class="logo-header4">
