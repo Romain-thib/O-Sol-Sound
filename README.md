@@ -6,6 +6,8 @@
 **O Sol Sound** est un site web dynamique de type blog musical, développé autour de l’univers de la **Bossa Nova**.
 
 Ce projet a été réalisé dans le cadre d’un **marathon web de 36 heures**, en équipe de **7 étudiants**, mêlant développement et création de contenus.
+Parmi eux, deux membres disposant d’un compte GitHub ont contribué à ce dépôt : @lx3u et @Shun-codes.
+
 
 ---
 
